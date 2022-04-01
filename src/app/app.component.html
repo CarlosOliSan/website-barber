@@ -1,0 +1,353 @@
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex justify-content-center">
+    <nav id="navbar" class="navbar">
+      <ul>        
+        <li><a class="nav-link scrollto active ps-0" href=".fundo">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">Quem Somos</a></li>
+        <li><a class="nav-link scrollto" href="#services">Serviços</a></li>
+        <li><a class="nav-link scrollto" href="#fila">Lista de Espera</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
+        <li><a class="nav-link scrollto" href="#galeria">Galeria</a></li>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+
+<div class="fundo" style="background-image: url(../assets/img/fundo.jpg)">
+  <div class="fundo-container">
+    <div class="container">
+      <h1><span>Joca</span>Barber's</h1>
+    </div>
+  </div>
+</div>
+
+<!--MAIN INICIO-->
+
+<main id="main">
+  <!-- ======= About Section ======= -->
+  <div id="about" class="about-area area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 mt-2">
+          <div class="section-headline text-center">
+            <h2>QUEM SOMOS</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- single-well start-->
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="well-left">
+            <div class="single-well">
+              <a href="#">
+                <img src="assets/img/sobre.jpg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- single-well end-->
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="well-middle">
+            <div class="single-well">
+              <a href="#">
+                <h4 class="sec-head">Joca Barber's</h4>
+              </a>
+              <p>
+                Você se achará maravilhoso! O homem moderno também cuida da sua aparência e a nossa barbearia é o melhor lugar para fazer isso! 
+                Quem quer ser bem atendido e voltar para casa mais bonito sabe que a barbearia Joca Barber's é o melhor lugar!
+                Criamos a barbearia com o intuito de transformar o mundo masculino trazendo a vaidade e beleza aos homens!
+                Criado por Carlos e João, somos dois alunos do curso de Desenvolvimento de Sistemas realizando um trabalho da matéria de Programação Web 3(PWIII).
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- End col-->
+      </div>
+    </div>
+  </div><!-- End About Section -->
+</main>
+
+<!--END MAIN-->
+
+ <!-- ======= Services Section ======= -->
+ <div id="services" class="services-area area-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline services-head text-center">
+          <h2>NOSSOS SERVIÇOS</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <!-- Start Left services -->
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="about-move">
+          <div class="services-details">
+            <div class="single-services">
+              <a class="services-icon" href="#">
+                <i class="bi bi-scissors"></i>
+              </a>
+              <h4>Corte de Cabelo</h4>
+              <p>
+                Aqui seu cabelo será cuidado, igual bebado cuida do seu copo de cerveja.
+              </p>
+            </div>
+          </div>
+          <!-- end about-details -->
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="about-move">
+          <div class="services-details">
+            <div class="single-services">
+              <a class="services-icon" href="#">
+                <!-- <i class="bi bi-card-checklist"></i> -->
+                <img class="servico" src="https://cdn-icons-png.flaticon.com/512/6019/6019027.png" alt=""> 
+              </a>
+              <h4>Barba</h4>
+              <p>
+                Venha conhecer nosso barbeiro e descubra uma nova barba, um novo mundo!
+              </p>
+            </div>
+          </div>
+          <!-- end about-details -->
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <!-- end col-md-4 -->
+        <div class=" about-move">
+          <div class="services-details">
+            <div class="single-services">
+              <a class="services-icon" href="#">
+                <img class="servico" src="https://cdn-icons-png.flaticon.com/512/40/40861.png" alt="">
+              </a>
+              <h4>Combo</h4>
+              <p>
+                Aqui é barba, cabelo e bigode! Venha dar aquele tapa no visual e tomar aquela cervejinha gelada conversando com os amigos.
+              </p>
+            </div>
+          </div>
+          <!-- end about-details -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Services Section -->
+<!--AGENDAMENTO-->
+
+<!-- ======= Lista de Espera ======= -->
+
+<div id="fila">
+  <div class="section-headline text-center">
+    <h2>Lista de Espera</h2>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+      <table class="table text-center mt-5">
+        <thead>
+          <tr>
+            <td># Fila</td>
+            <td>Cliente</td>
+            <td>Serviço</td>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of fila; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{item.cliente}}</td>
+            <td>{{servicos[item.servico]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--AGENDAMENTO-->
+
+<!--FIM DO AGENDAMENTO-->
+    <!-- ======= Contact Section ======= -->
+    <div id="contact" class="contact-area">
+      <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>Contato</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-phone"></i>
+                  <p>
+                    Telefone: +123 456 789<br>
+                    <span>Segunda-Sábado (09:00-17:00)</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-envelope"></i>
+                  <p>
+                    Email: jocabarbers@gmail.com<br>
+                    <span>Web: www.jocabarbers.com</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-geo-alt"></i>
+                  <p>
+                    Location: A108 Adam Street<br>
+                    <span>NY 535022, USA</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <!-- Start Google Map -->
+            <div class="col-md-6">
+              <!-- Start Map -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <!-- End Map -->
+            </div>
+            <!-- End Google Map -->
+
+            <!-- Start  contact -->
+            <div class="col-md-6">
+              <div class="form contact-form">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
+                  </div>
+                  <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+                  <div class="text-center"><button type="submit">Enviar Mensagem</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+     <!-- ======= Footer ======= -->
+  <footer>
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-content">
+              <div class="footer-head">
+                <div class="footer-logo">
+                  <h2><span>Joca</span>Barber's</h2>
+                </div>
+
+                <p>Aqui você encontrará tudo o que busca em uma barbearia, cerveja gelada, músicas boas, jogatinas. Venha ter a experiência
+                  da verdadeira Bar Bearia. Agende agora mesmo seu horário conosco e chama os parça.
+                </p>
+                <div class="footer-icons">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4>informações</h4>
+                <p>
+                  Para ter mais informações sobre nós, segue abaixo as formas de contato.
+                </p>
+                <div class="footer-contacts">
+                  <p><span>Tel:</span> +123 456 789</p>
+                  <p><span>Email:</span> jocabarbers@gmail.com</p>
+                  <p><span>Horário de Atendimento:</span> 09:00-17:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4" id="galeria">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4>Instagram</h4>
+                <div class="flicker-img">
+                  <a href="#"><img src="../assets/img/barba1.png" alt=""></a>
+                  <a href="#"><img src="../assets/img/barba2.png" alt=""></a>
+                  <a href="#"><img src="../assets/img/barba3.png" alt=""></a>
+                  <a href="#"><img src="../assets/img/corte1.png" alt=""></a>
+                  <a href="#"><img src="../assets/img/corte2.png" alt=""></a>
+                  <a href="#"><img src="../assets/img/corte3.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-area-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="copyright text-center">
+              <p>
+                &copy; Copyright <strong>Joca Barber's</strong>. All Rights Reserved
+              </p>
+            </div>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+            -->
+              Designed by <a href="https://bootstrapmade.com/">Carlos e João</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
